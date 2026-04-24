@@ -11,11 +11,11 @@ This plugin turns Claude Code into a conversational complaint letter assistant. 
 ## Installation
 
 ```bash
-# Install from GitHub
-/plugins add https://github.com/yonh/zhipu-complaint
+# Step 1: Add the marketplace
+/plugin marketplace add yonh/zhipu-complaint
 
-# Or install locally
-/plugins add /path/to/zhipu-complaint
+# Step 2: Install the plugin
+/plugin install zhipu-complaint@zhipu-complaint
 ```
 
 ## Usage

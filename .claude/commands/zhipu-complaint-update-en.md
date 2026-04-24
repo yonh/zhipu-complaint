@@ -35,15 +35,19 @@ Based on the user's update request:
 
 ---
 
-## Step 4: Output Version
+## Step 4: Output Version and Auto-Save
 
-Output the updated full complaint letter with an incremented version number (e.g., from v1 to `<!-- v2 -->`).
+Generate the updated full complaint letter with an incremented version number (e.g., from v1 to `<!-- v2 -->`).
 
 Add a change summary comment at the top of the complaint letter:
 
 ```
 <!-- v2: Added "broken promise" fact paragraph, updated Section 3 compensation demand -->
 ```
+
+Immediately after generating, write the full content to the corresponding versioned file (e.g., `complaint-v2.md`) using the Write tool — do not wait for the user to ask. Then notify the user:
+
+> The updated complaint letter has been saved to `complaint-v2.md`.
 
 ---
 

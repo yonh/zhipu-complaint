@@ -76,16 +76,20 @@ Before writing, summarize all collected facts in a brief bullet list and ask:
 
 ---
 
-## Step 8: Generate Complaint Letter
+## Step 8: Generate Complaint Letter and Auto-Save
 
 After the user confirms, generate the full complaint letter following the structure defined in `CLAUDE.md`. Mark the top with `<!-- v1 -->`.
+
+Immediately after generating, write the full content to `complaint-v1.md` using the Write tool — do not wait for the user to ask. Then notify the user:
+
+> The complaint letter has been saved to `complaint-v1.md`.
 
 ---
 
 ## Step 9: Iteration Prompt
 
-After generating the complaint letter, ask:
+After saving the file, ask:
 
 > Which part would you like to adjust? (Wordings / Legal basis / Demands / Tone / Other)
 
-Apply targeted edits based on user feedback and increment the version number. After each revision, ask again if further adjustments are needed.
+Apply targeted edits based on user feedback, increment the version number, and write the updated version to a new file (e.g., `complaint-v2.md`). Notify the user of the new filename. After each revision, ask again if further adjustments are needed.

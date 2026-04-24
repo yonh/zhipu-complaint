@@ -1,0 +1,16 @@
+{
+  "name": "zhipu-complaint",
+  "metadata": {
+    "description": "Claude Code plugin for generating formal complaint letters against Zhipu AI"
+  },
+  "owner": {
+    "name": "yonh"
+  },
+  "plugins": [
+    {
+      "name": "zhipu-complaint",
+      "source": ".",
+      "description": "Generate formal complaint letters against Zhipu AI for consumer rights violations"
+    }
+  ]
+}

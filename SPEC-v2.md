@@ -27,11 +27,18 @@
 ## Target File Structure (delta from SPEC v1)
 
 ```
-.claude/commands/
-├── zhipu-complaint.md            ← NEW (Chinese default, /zhipu-complaint)
-├── zhipu-complaint-update.md     ← NEW (Chinese default, /zhipu-complaint-update)
-├── zhipu-complaint-en.md         ← RENAMED + content fully in English
-└── zhipu-complaint-update-en.md  ← RENAMED + content fully in English
+.claude-plugin/
+└── marketplace.json              ← source must be "./zhipu-complaint" (not ".")
+.claude/commands/                 ← for local development (working inside the repo)
+├── zhipu-complaint.md
+├── zhipu-complaint-update.md
+├── zhipu-complaint-en.md
+└── zhipu-complaint-update-en.md
+zhipu-complaint/commands/         ← for marketplace install (must mirror .claude/commands/)
+├── zhipu-complaint.md
+├── zhipu-complaint-update.md
+├── zhipu-complaint-en.md
+└── zhipu-complaint-update-en.md
 ```
 
 Files to **delete**:
@@ -108,18 +115,41 @@ No other behavioral changes from the v1 spec.
 
 ---
 
-### 5. `README.md` (update — command table)
+### 5. `README.md` (REPLACE — Chinese default)
 
-Replace the existing Usage section with a table that lists all 4 commands:
+The primary README must be in Chinese to match the plugin's default language.
+Replace the entire file content with a Chinese version that includes:
 
-| Command | Language | Description |
-|---------|----------|-------------|
-| `/zhipu-complaint` | Chinese (default) | Start a new complaint session guided by Claude |
-| `/zhipu-complaint-update` | Chinese (default) | Add facts, update demands, or refine an existing draft |
-| `/zhipu-complaint-en` | English | Same as above in English |
-| `/zhipu-complaint-update-en` | English | Same as above in English |
+- **项目标题:** `# zhipu-complaint`
+- **一句话描述:** Claude Code 插件，帮助用户生成针对智谱 AI 的正式消费者权益投诉信。
+- **安装方式** (保留两种方式，命令不变，注释改为中文)
+- **使用方式** — 4 命令对照表，列名用中文（命令 / 语言 / 说明）：
 
-Keep all other README sections unchanged.
+  | 命令 | 语言 | 说明 |
+  |------|------|------|
+  | `/zhipu-complaint` | 中文（默认） | 启动新投诉信会话，Claude 全程引导 |
+  | `/zhipu-complaint-update` | 中文（默认） | 追加事实、更新诉求或完善已有草稿 |
+  | `/zhipu-complaint-en` | English | Same as above in English |
+  | `/zhipu-complaint-update-en` | English | Same as above in English |
+
+- **使用前准备** — 中文说明用户需提前备好的信息（时间线、承诺截图、损失金额、诉求、证据）
+- **输出格式** — 中文说明（Markdown、带版本号、含变更记录）
+- **法律依据** — 中文说明，列出三部法规，保留英文注的原法规名，末尾保留免责提示
+- **License** — MIT
+- **English version:** See [README.en.md](./README.en.md)
+
+---
+
+### 6. `README.en.md` (NEW — English version)
+
+Create a new file `README.en.md` containing the **current English content of `README.md`**
+exactly as-is, with one addition: add a line at the top of the file (before the `#` title):
+
+```
+> 中文文档请参阅 [README.md](./README.md)
+```
+
+No other changes to the English content.
 
 ---
 
@@ -147,7 +177,14 @@ The implementation is correct when ALL of the following are true:
 6. **Forced confirmation (Step 7) is present** in both `/zhipu-complaint` and
    `/zhipu-complaint-en`. Neither may generate a draft before user confirmation.
 
-7. **README Usage section** lists all 4 commands in a table with language labels.
+7. **README Usage section** lists all 4 commands in a table with Chinese column headers
+   (`命令 / 语言 / 说明`).
 
-8. **No other files are modified.** `CLAUDE.md`, `marketplace.json`, `LICENSE`,
-   `SPEC.md`, `SPEC-v2.md` are untouched.
+8. **`README.md` is in Chinese.** No English prose outside of the commands table's
+   English rows and the law names. A link to `README.en.md` is present.
+
+9. **`README.en.md` exists** and contains the original English content plus a Chinese
+   doc link at the top.
+
+10. **No other files are modified.** `CLAUDE.md`, `marketplace.json`, `LICENSE`,
+    `SPEC.md`, `SPEC-v2.md` are untouched.

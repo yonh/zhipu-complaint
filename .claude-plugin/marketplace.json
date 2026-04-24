@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "zhipu-complaint",
-      "source": ".",
+      "source": "./zhipu-complaint",
       "description": "Generate formal complaint letters against Zhipu AI for consumer rights violations"
     }
   ]

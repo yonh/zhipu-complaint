@@ -92,4 +92,11 @@ After saving the file, ask:
 
 > Which part would you like to adjust? (Wordings / Legal basis / Demands / Tone / Other)
 
-Apply targeted edits based on user feedback, increment the version number, and write the updated version to a new file (e.g., `complaint-v2.md`). Notify the user of the new filename. After each revision, ask again if further adjustments are needed.
+Apply targeted edits based on user feedback, increment the version number, and use the **Write tool to create a new file** (e.g., `complaint-v2.md`). Notify the user of the new filename.
+
+**Strictly prohibited:**
+- Do NOT Edit any existing version file (e.g., do not modify `complaint-v1.md`)
+- Do NOT use mv / rename to rename any existing version file
+- All previous version files must be kept intact and unmodified
+
+After each revision, ask again if further adjustments are needed.

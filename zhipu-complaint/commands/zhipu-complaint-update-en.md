@@ -45,9 +45,16 @@ Add a change summary comment at the top of the complaint letter:
 <!-- v2: Added "broken promise" fact paragraph, updated Section 3 compensation demand -->
 ```
 
-Immediately after generating, write the full content to the corresponding versioned file (e.g., `complaint-v2.md`) using the Write tool — do not wait for the user to ask. Then notify the user:
+Immediately after generating, use the **Write tool to create a new file** (e.g., `complaint-v2.md`) — do not wait for the user to ask.
 
-> The updated complaint letter has been saved to `complaint-v2.md`.
+**Strictly prohibited:**
+- Do NOT Edit any existing version file (e.g., do not modify `complaint-v1.md`)
+- Do NOT use mv / rename to rename any existing version file
+- All previous version files must be kept intact and unmodified
+
+Then notify the user:
+
+> The updated complaint letter has been saved to `complaint-v2.md`. The previous version `complaint-v1.md` has been kept.
 
 ---
 

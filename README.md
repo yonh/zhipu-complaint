@@ -18,8 +18,12 @@ This plugin turns Claude Code into a conversational complaint letter assistant. 
 
 ## Usage
 
-- **`/complaint`** — Start a new complaint session. Claude will guide you through the process step by step, collecting facts before drafting the letter.
-- **`/complaint-update`** — Add new facts, update demands, or refine an existing draft. Only affected sections are rewritten.
+| Command | Language | Description |
+|---------|----------|-------------|
+| `/zhipu-complaint` | Chinese (default) | Start a new complaint session guided by Claude |
+| `/zhipu-complaint-update` | Chinese (default) | Add facts, update demands, or refine an existing draft |
+| `/zhipu-complaint-en` | English | Same as above in English |
+| `/zhipu-complaint-update-en` | English | Same as above in English |
 
 ## What to Prepare
 

@@ -1,58 +1,60 @@
 # zhipu-complaint
 
-Claude Code plugin for consumer rights complaints against Zhipu AI (智谱华章科技有限公司).
+Claude Code 插件，帮助用户生成针对智谱 AI（智谱华章科技有限公司）的正式消费者权益投诉信。
 
-## What This Does
+## 功能介绍
 
-This plugin turns Claude Code into a conversational complaint letter assistant. Through a structured interview, Claude gathers your facts, applies relevant Chinese consumer protection law, and generates a ready-to-send Markdown complaint letter. Supports iterative refinement with versioned output.
+本插件将 Claude Code 变为一个对话式投诉信助手。通过结构化访谈，Claude 收集你的事实经过，适用相关消费者权益保护法律，生成可直接发送的 Markdown 格式投诉信。支持多次迭代修改，输出带版本号。
 
-## Installation
+## 安装
 
 ```bash
-# Install from GitHub
+# 从 GitHub 安装
 /plugins add https://github.com/yonh/zhipu-complaint
 
-# Or install locally
+# 或本地安装
 /plugins add /path/to/zhipu-complaint
 ```
 
-## Usage
+## 使用方式
 
-| Command | Language | Description |
-|---------|----------|-------------|
-| `/zhipu-complaint` | Chinese (default) | Start a new complaint session guided by Claude |
-| `/zhipu-complaint-update` | Chinese (default) | Add facts, update demands, or refine an existing draft |
+| 命令 | 语言 | 说明 |
+|------|------|------|
+| `/zhipu-complaint` | 中文（默认） | 启动新投诉信会话，Claude 全程引导 |
+| `/zhipu-complaint-update` | 中文（默认） | 追加事实、更新诉求或完善已有草稿 |
 | `/zhipu-complaint-en` | English | Same as above in English |
 | `/zhipu-complaint-update-en` | English | Same as above in English |
 
-## What to Prepare
+## 使用前准备
 
-Before starting, have the following information ready:
+开始前，请准备好以下信息：
 
-- **Key dates and timeline** — When did you subscribe? When did the issue start?
-- **What was promised** — Screenshots of announcements, emails, or UI showing what you were promised
-- **What actually happened** — How the reality differs from the promise
-- **Your specific demands** — Refund, restore rights, compensation, etc.
-- **Evidence on hand** — Receipts, screenshots, support chat logs, etc.
+- **关键日期和时间线** — 何时订阅？问题从何时开始？
+- **承诺内容** — 公告、邮件或界面截图，记录了对方承诺的内容
+- **实际发生的情况** — 与承诺有什么出入
+- **你的具体诉求** — 退款、恢复权益、赔偿等
+- **手头的证据** — 收据、截图、客服聊天记录等
 
-## Output Format
+## 输出格式
 
-Generated complaint letters are:
+生成的投诉信为：
 
-- **Markdown format** — suitable for email, print, or social media posts
-- **Versioned** — each revision is labeled (v1, v2, v3...)
-- **Change-tracked** — updates include a summary of what changed
+- **Markdown 格式** — 可直接用于邮件、打印或社交平台发布
+- **带版本号** — 每次修订标注版本（v1、v2、v3……）
+- **含变更记录** — 更新时附带变更摘要
 
-## Legal Basis
+## 法律依据
 
-This plugin references Chinese consumer protection laws including:
+本插件引用以下中国消费者保护法律：
 
 - 《消费者权益保护法》(Consumer Rights Protection Law)
 - 《民法典》合同编 (Civil Code — Contract Section)
 - 《网络交易监督管理办法》(Online Transaction Supervision Measures)
 
-**Important:** Users should verify all legal citations for accuracy before submitting formal complaints to authorities.
+**重要提示：** 用户在正式提交投诉前，应核实所有法律引用的准确性。
 
 ## License
 
 MIT
+
+**English version:** See [README.en.md](./README.en.md)
